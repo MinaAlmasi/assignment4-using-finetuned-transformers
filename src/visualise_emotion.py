@@ -25,7 +25,7 @@ from tabulate import tabulate
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def create_emotion_table(data, savepath):
+def create_emotion_table(data, savepath:pathlib.Path):
     '''
     Create table of emotions per fake and real news in a README friendly format. 
     Write table to .txt file. 
@@ -65,7 +65,7 @@ def create_emotion_table(data, savepath):
     with open(savepath, 'w') as file:
         file.write(table)
 
-def create_emotion_countplot(data, savepath):
+def create_emotion_countplot(data, savepath:pathlib.Path):
     '''
     Creates two countplots of emotions. One across all news articles and one across fake and real news.
     Save figure to .png file.
@@ -119,7 +119,7 @@ def create_emotion_countplot(data, savepath):
     fig.savefig(savepath, dpi=300)
 
 
-def create_emotion_piecharts(data, savepath):
+def create_emotion_piecharts(data, savepath:pathlib.Path):
     '''
     Creates two piecharts of emotions. One across all news articles and one across fake and real news.
 
@@ -138,7 +138,7 @@ def create_emotion_piecharts(data, savepath):
     # create labels
     emotion_labels = [label.title() for label in count_table.index]
 
-    # define color palette
+    # define color palette (manually to match colors in countplot)
     colors = ["#91db57","#57d3db", "#dbc257", "#a157db", "#db5f57", "#57db80", "#5770db"]
 
     # create two subplots with overall figsize

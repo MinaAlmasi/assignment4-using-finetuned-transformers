@@ -16,7 +16,7 @@ import pandas as pd
 # huggingface model
 from transformers import pipeline
 
-def emotion_classify(classifier, data, text_column):
+def emotion_classify(classifier, data, text_column:str):
     '''
     Perform emotion classification on text column in a dataframe with an already initalised and fine-tuned huggingface model. 
     Return the emotion with highest probability and its probability score. 

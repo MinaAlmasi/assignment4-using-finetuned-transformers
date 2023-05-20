@@ -1,10 +1,10 @@
 # Using Finetuned Transformers via HuggingFace: Detecting Emotions in Fake and Real News Headlines
 This repository forms *assignment 4* by Mina Almasi (202005465) in the subject Language Analytics, Cultural Data Science, F2023. The assignment description can be found [here](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers/blob/main/assignment-desc.md). 
 
-The repository contains code for running an emotion classification using the BERT model using the BERT model [j-hartmann/emotion-english-distilroberta-base](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). The results are visualized and key differences between the two sets of headlines are discussed in the [Results](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers#results) section.
+The repository contains code for running an emotion classification using the BERT model [*j-hartmann/emotion-english-distilroberta-base*](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). The results are visualized and key differences between the two sets of headlines are discussed in the [Results](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers#results) section.
 
 ## Data
-The classifiers are trained on the [Fake or Real News](https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news) dataset. The dataset contains the title (headline), text and label (```FAKE``` or ```REAL```) of 7796 articles. The dataset is located in the ```data``` folder. 
+The emotion classifcation is run on ```FAKE``` and ```REAL``` news headlines from the [Fake or Real News](https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news) dataset. The dataset contains the title (headline), text and label of 7796 articles. The dataset is located in the ```data``` folder. 
 
 ## Reproducibility
 To reproduce the emotion classification and visualisation, follow the instructions in the [Pipeline](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers#pipeline) section.
@@ -81,9 +81,11 @@ The plots reveal that the proportion of each emotion is very similar between the
 For ```Neutral```, the difference between ```REAL```  and ```FAKE``` is ```3.6``` percentage points. For the other emotions, the difference is around 1 percentage point in the distribution of emotions between the two groups with ```Disgust``` displaying a slightly higher difference (```1.9``` percentage points difference with the proportion being higher in ```FAKE``` headlines). 
 
 ### Conclusion
-No major differences between ```Real``` and ```Fake``` emotions are present in the emotion classification done by [j-hartmann/emotion-english-distilroberta-base](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). In general, the headlines seem to be predominantly classified as ```Neutral```. 
+No major differences between ```REAL``` and ```FAKE``` headlines are present in the emotion classification done by [j-hartmann/emotion-english-distilroberta-base](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). In general, the headlines seem to be predominantly classified as ```Neutral```. 
 
-It should be noted that these classifications are merely the result of one finetuned model, and they do not represent any **ground truth**. We can therefore not conclude that most news headlines are ```Neutral```, but merely that this is the model's "opinion." Two things could be considered for a more nuanced look into these differences. Firstly, it may be of interest to compare the current model with other similar models to investigate whether there is agreement in these classifications. Secondly, each emotion label is given a probability score that is also included in the labelled data (```fake_or_real_news_with_emotion_labels.csv```). It is worth investigating whether there are differences in how certain the model has been in classifying emotions for ```REAL```  versus ```FAKE``` headlines. 
+It should be noted that these classifications are merely the result of one finetuned model, and they do not represent any **ground truth**. We can therefore not conclude that most news headlines are ```Neutral```, but merely that this is the model's "opinion." On the [model card](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base) on Hugging Face, it is mentioned that the evaluation accuracy was 66% which is notably higher than the chance level of 14%. Nonetheless, the model is not perfect. 
+
+Two things could be considered for a more nuanced look into these differences. Firstly, it may be of interest to compare the current model with other similar models to investigate whether there is agreement in these classifications. Secondly, each emotion label is given a probability score that is also included in the labelled data (```fake_or_real_news_with_emotion_labels.csv```). It is worth investigating whether there are differences in how certain the model has been in classifying emotions for ```REAL```  versus ```FAKE``` headlines. 
 
 ## Author 
 This repository was created by Mina Almasi:
