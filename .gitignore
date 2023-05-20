@@ -128,9 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# data (gitignore original data, but not the labelled data as that file is very small!) 
-data/*.csv
-!data/fake_or_real_news_with_emotion_labels.csv
-
 # DS store (Mac OS file)
 .DS_Store
