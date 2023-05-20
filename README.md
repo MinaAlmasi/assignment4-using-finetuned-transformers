@@ -1,18 +1,22 @@
 # Using Finetuned Transformers via HuggingFace: Detecting Emotions in Fake and Real News Headlines
-This repository forms **assignment 4** in the subject Language Analytics, Cultural Data Science, F2023. The assignment description can be found [here](https://github.com/AU-CDS/assignment-4---using-finetuned-transformers-MinaAlmasi/blob/main/assignment-desc.md). The code is written by Mina Almasi (202005465). 
+This repository forms *assignment 4* by Mina Almasi (202005465) in the subject Language Analytics, Cultural Data Science, F2023. The assignment description can be found [here](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers/blob/main/assignment-desc.md). 
 
-The repository contains code for running an emotion classification on the Kaggle dataset ["Fake or Real News"](https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news) using the BERT model [j-hartmann/emotion-english-distilroberta-base](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). The results are visualized and key differences between the two sets of headlines are discussed in the [Results](https://github.com/AU-CDS/assignment-4---using-finetuned-transformers-MinaAlmasi#results) section.
+The repository contains code for running an emotion classification using the BERT model using the BERT model [j-hartmann/emotion-english-distilroberta-base](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). The results are visualized and key differences between the two sets of headlines are discussed in the [Results](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers#results) section.
+
+## Data
+The classifiers are trained on the [Fake or Real News](https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news) dataset. The dataset contains the title (headline), text and label (```FAKE``` or ```REAL```) of 7796 articles. The dataset is located in the ```data``` folder. 
 
 ## Reproducibility
-To reproduce the emotion classification and visualisation, follow the instructions in the [Pipeline](https://github.com/AU-CDS/assignment-4---using-finetuned-transformers-MinaAlmasi#pipeline) section.
+To reproduce the emotion classification and visualisation, follow the instructions in the [Pipeline](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers#pipeline) section.
 
 ## Project Structure
 The repository is structured as such:
 ```
 ├── README.md
 ├── assignment-desc.md
-├── data                                                <---     download and place original data here to reproduce pipeline 
+├── data                                                
 │   ├── README.md  
+│   └── fake_or_real_news.csv                           <---     raw data with titles, text, headlines and label
 │   └── fake_or_real_news_with_emotion_labels.csv       <---     REAL/FAKE headlines with emotion labels and scores
 ├── figures                                             <---     all figures/table shown in README are stored here
 │   ├── emotion_countplot.png       
@@ -27,15 +31,14 @@ The repository is structured as such:
 ```
 
 ## Pipeline
-This pipeline was built on Ubuntu ([UCloud](https://cloud.sdu.dk/)). 
+The pipeline has been tested on Ubuntu ([UCloud](https://cloud.sdu.dk/)). Python's [venv](https://docs.python.org/3/library/venv.html) needs to be installed for the pipeline to work.
 
 ### Setup
-To run the entire pipeline, please firstly install the dataset [Fake and Real News](https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news) from *Kaggle* and place it in the ```data``` folder.
-
-Secondly, install the necessary packages and requirements by running ```setup.sh``` in the terminal:
+Prior to running the emotion classification, install the necessary packages and requirements in a newly created ```env``` by running ```setup.sh```:
 ```
 bash setup.sh
 ```
+
 ## Running the Classification and Visualisation
 To run the full analysis pipeline (including the emotion classification and visualisation), type ```run.sh``` in the terminal:
 ```
@@ -56,7 +59,7 @@ An overview of the distribution of emotion labels in the news headlines is displ
 The distribution is further visualised with two count plots below. The first plot shows the overall distribution (```ALL```) while the second plot groups this distribution by whether the news headline is ```REAL``` or ```FAKE```: 
 
 <p align="left">
-  <img src="https://github.com/AU-CDS/assignment-4---using-finetuned-transformers-MinaAlmasi/blob/main/figures/emotion_countplot.png">
+  <img src="https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers/blob/main/figures/emotion_countplot.png">
 </p>
  
 
@@ -70,7 +73,7 @@ Noteably, the magnitude of the differences between the groups ```REAL``` and ```
 The pie charts below display the proportion of each emotion in ```REAL``` and ```FAKE``` news headlines, respectively:
 
 <p align="left">
-  <img src="https://github.com/AU-CDS/assignment-4---using-finetuned-transformers-MinaAlmasi/blob/main/figures/emotion_piecharts.png">
+  <img src="https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers/blob/main/figures/emotion_piecharts.png">
 </p>
 
 The plots reveal that the proportion of each emotion is very similar between the two groups. 
