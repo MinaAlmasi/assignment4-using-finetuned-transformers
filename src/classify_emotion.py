@@ -52,7 +52,6 @@ def emotion_classify(classifier, data, text_column):
 
     return final_data
 
-
 def main(): 
     # define paths 
     path = pathlib.Path(__file__)
@@ -69,7 +68,7 @@ def main():
                       )
 
     # do emotion classification
-    emotion_data = (emotion_classify(classifier, data, "title"))
+    emotion_data = emotion_classify(classifier, data, "title")
 
     # save data
     emotion_data.to_csv(datapath / "fake_or_real_news_with_emotion_labels.csv")

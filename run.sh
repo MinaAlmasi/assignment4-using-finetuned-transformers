@@ -3,11 +3,11 @@ source ./env/bin/activate
 
 # run classification
 echo -e "[INFO:] Running Emotion Classification using BERT..."
-python src/classify_emotion.py
+python3 src/classify_emotion.py
 
 # run visualisations
 echo -e "[INFO:] Creating Visualizations ..."
-python src/visualise_emotion.py
+python3 src/visualise_emotion.py
 
 # deactivate env 
 deactivate
