@@ -57,7 +57,7 @@ def main():
     path = pathlib.Path(__file__)
     datapath = path.parents[1] / "data"
 
-    # load data 
+    # load data (only loading the relevant columns)
     data = pd.read_csv(datapath / "fake_or_real_news.csv", usecols=["title", "label"])
 
     # initialize pipeline
