@@ -16,15 +16,15 @@ The repository is structured as such:
 ├── assignment-desc.md
 ├── data                                                
 │   ├── README.md  
-│   └── fake_or_real_news.csv                           <---     raw data with titles, text, headlines and label
-│   └── fake_or_real_news_with_emotion_labels.csv       <---     REAL/FAKE headlines with emotion labels and scores
-├── figures                                             <---     all figures/table shown in README are stored here
+│   └── fake_or_real_news.csv                           <---     raw data with titles, text, headlines & label
+│   └── fake_or_real_news_with_emotion_labels.csv       <---     REAL/FAKE headlines w. emotion labels & scores
+├── figures                                             <---     all figures/table in README are stored here
 │   ├── emotion_countplot.png       
 │   ├── emotion_piecharts.png
 │   └── emotion_table.txt
 ├── requirements.txt 
-├── run.sh                                              <---     to reproduce entire pipeline (classification & visualisation)
-├── setup.sh                                            <---     creates virtual env, install necessary reqs (from requirements.txt)
+├── run.sh                                              <---     to reproduce pipeline (classify + visualise)
+├── setup.sh                                            <---     creates virtual env, install necessary reqs
 └── src
     ├── classify_emotion.py                             <---     perform emotion classification
     └── visualise_emotion.py                            <---     visualise results from classification
@@ -80,7 +80,7 @@ The plots reveal that the proportion of each emotion is very similar between the
 
 For ```Neutral```, the difference between ```REAL```  and ```FAKE``` is ```3.6``` percentage points. For the other emotions, the difference is around 1 percentage point in the distribution of emotions between the two groups with ```Disgust``` displaying a slightly higher difference (```1.9``` percentage points difference with the proportion being higher in ```FAKE``` headlines). 
 
-### Conclusion
+### Discussion and Conclusion
 No major differences between ```REAL``` and ```FAKE``` headlines are present in the emotion classification done by [j-hartmann/emotion-english-distilroberta-base](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). In general, the headlines seem to be predominantly classified as ```Neutral```. 
 
 It should be noted that these classifications are merely the result of one finetuned model, and they do not represent any **ground truth**. We can therefore not conclude that most news headlines are ```Neutral```, but merely that this is the model's "opinion." On the [model card](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base) on Hugging Face, it is mentioned that the evaluation accuracy was 66% which is notably higher than the chance level of 14%. Nonetheless, the model is not perfect. 
