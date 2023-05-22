@@ -78,9 +78,7 @@ The pie charts below display the proportion of each emotion in ```REAL``` and ``
   <img src="https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers/blob/main/figures/emotion_piecharts.png">
 </p>
 
-The plots reveal that the proportion of each emotion is very similar between the two groups. 
-
-For ```Neutral```, the difference between ```REAL```  and ```FAKE``` is ```3.6``` percentage points. For the other emotions, the difference is around 1 percentage point in the distribution of emotions between the two groups with ```Disgust``` displaying a slightly higher difference (```1.9``` percentage points difference with the proportion being higher in ```FAKE``` headlines). 
+The plots reveal that the proportion of each emotion is very similar between the two groups with only small discrepancies. A noticable difference is that there is a greater portion of ```Neutral``` emotions in the ```REAL``` news headlines than the ```FAKE``` news headlines (```3.6``` percentage points). On the other hand, the share of ```Disgust``` is greater amongst the ```Fake``` news (```1.9``` percentage points).
 
 ### Discussion and Conclusion
 No major differences between ```REAL``` and ```FAKE``` headlines are present in the emotion classification done by [j-hartmann/emotion-english-distilroberta-base](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). In general, the headlines seem to be predominantly classified as ```Neutral```. 
