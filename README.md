@@ -17,8 +17,7 @@ The repository is structured as such:
 ├── README.md
 ├── assignment-desc.md
 ├── data                                                
-│   ├── README.md  
-│   └── fake_or_real_news.csv                           <---     raw data with titles, text, headlines & label
+│   ├── fake_or_real_news.csv                           <---     raw data with titles, text, headlines & label
 │   └── fake_or_real_news_with_emotion_labels.csv       <---     REAL/FAKE headlines w. emotion labels & scores
 ├── figures                                             <---     all figures/table in README are stored here
 │   ├── emotion_countplot.png       
