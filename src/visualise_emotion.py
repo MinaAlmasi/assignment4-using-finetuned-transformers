@@ -1,8 +1,10 @@
 '''
-
 Script for Assignment 4, Language Analytics, Cultural Data Science, F2023
 
 Visualise emotion labels in fake and real news headlines given by the BERT classifier (j-hartmann/emotion-english-distilroberta-base) used in src/classify_emotion.py.
+
+In the terminal, run the script by typing:
+    python src/visualise_emotion.py
 
 The script creates the following: 
 1. A table of emotions per fake and real news headlines in a README friendly format saved as .txt file.

@@ -3,6 +3,12 @@ Script for Assignment 4, Language Analytics, Cultural Data Science, F2023
 
 Emotion classification on real and fake news headlines using the BERT classifier "j-hartmann/emotion-english-distilroberta-base". 
 
+In the terminal, run the script by typing:
+    python src/classify_emotion.py
+
+The script saves a .CSV file with the headlines, labels and emotion classifcations (+ probabilitiy scores) of the news articles in Fake or Real News dataset (https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news).
+The file is found in the "data" folder. 
+
 @MinaAlmasi
 '''
 
