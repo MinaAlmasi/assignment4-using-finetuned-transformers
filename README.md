@@ -6,7 +6,7 @@ This repository forms *assignment 4* by Mina Almasi (202005465) in the subject L
 The repository contains code for running an emotion classification using the BERT model [*j-hartmann/emotion-english-distilroberta-base*](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). The results are visualized and key differences between the two sets of headlines are discussed in the [Results](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers#results) section.
 
 ## Data
-The emotion classifcation is run on ```FAKE``` and ```REAL``` news headlines from the [Fake or Real News](https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news) dataset. The dataset contains 7796 articles. It is located in the ```data``` folder. 
+The emotion classification is run on ```FAKE``` and ```REAL``` news headlines from the [Fake or Real News](https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news) dataset. The dataset contains 7796 articles. It is located in the ```data``` folder. 
 
 ## Reproducibility
 To reproduce the emotion classification and visualisation, follow the instructions in the [Pipeline](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers#pipeline) section.
