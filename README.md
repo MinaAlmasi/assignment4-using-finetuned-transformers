@@ -1,4 +1,6 @@
 # Using Finetuned Transformers via HuggingFace: Detecting Emotions in Fake and Real News Headlines
+Repository link: https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers
+
 This repository forms *assignment 4* by Mina Almasi (202005465) in the subject Language Analytics, Cultural Data Science, F2023. The assignment description can be found [here](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers/blob/main/assignment-desc.md). 
 
 The repository contains code for running an emotion classification using the BERT model [*j-hartmann/emotion-english-distilroberta-base*](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base). The results are visualized and key differences between the two sets of headlines are discussed in the [Results](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers#results) section.
