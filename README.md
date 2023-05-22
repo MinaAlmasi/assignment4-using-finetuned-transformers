@@ -1,4 +1,4 @@
-# Using Finetuned Transformers via HuggingFace: Detecting Emotions in Fake and Real News Headlines
+# Using Finetuned Transformers via HuggingFace
 Repository link: https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers
 
 This repository forms *assignment 4* by Mina Almasi (202005465) in the subject Language Analytics, Cultural Data Science, F2023. The assignment description can be found [here](https://github.com/MinaAlmasi/assignment4-using-finetuned-transformers/blob/main/assignment-desc.md). 
